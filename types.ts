@@ -96,10 +96,3 @@ export interface FeedbackItem {
   comment: string;
   created_at: string;
 }
-
-export interface ShareableLink {
-  id: string;
-  userName: string;
-  url: string;
-  usageCount: number;
-}
