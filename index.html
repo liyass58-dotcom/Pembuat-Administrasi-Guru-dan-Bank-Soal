@@ -1,132 +1,38 @@
-<!doctype html>
-<html lang="id" class="h-full">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pembuat Administrasi Guru dan Bank Soal | YPI Al-Ghozali</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      box-sizing: border-box;
-    }
-    .card-shadow {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    .loading-spinner {
-      border: 3px solid #f3f4f6;
-      border-top: 3px solid #3b82f6;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .fade-in {
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .arabic-font-preview {
-        font-family: 'Arabic Typesetting', 'Traditional Arabic', serif;
-        direction: rtl;
-    }
-    .arabic-font-preview h1, 
-    .arabic-font-preview h2, 
-    .arabic-font-preview h3, 
-    .arabic-font-preview h4, 
-    .arabic-font-preview th,
-    .arabic-font-preview [contenteditable] {
-        text-align: right;
-    }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tafsir Juz Amma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-arabic {
+        font-family: 'Amiri', serif;
+        line-height: 2.5;
+      }
+    </style>
 
-    /* Onboarding Tour Styles */
-    .tour-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 1000;
-        transition: opacity 0.3s ease;
-    }
-    .tour-spotlight {
-        position: relative !important;
-        z-index: 1001 !important;
-        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5);
-        border-radius: 8px; /* Match the element's border-radius */
-    }
-    .tour-popover {
-        position: fixed;
-        z-index: 1002;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        max-width: 320px;
-        padding: 1.25rem;
-        transition: top 0.3s ease, left 0.3s ease;
-    }
-    
-    /* PPT Slide Styles */
-    .ppt-container {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 1rem;
-        background-color: #f9f9f9;
-    }
-    .ppt-slide {
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .ppt-slide:last-child {
-        margin-bottom: 0;
-    }
-    .slide-title {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #3b82f6; /* Blue-600 */
-        border-bottom: 2px solid #93c5fd; /* Blue-300 */
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-    }
-    .slide-content {
-        font-size: 1.1em;
-        line-height: 1.6;
-        color: #374151; /* Gray-700 */
-    }
-    .slide-content ul {
-        list-style-type: disc;
-        padding-left: 2rem;
-    }
-    .slide-content li {
-        margin-bottom: 0.5rem;
-    }
-
-  </style>
-<script type="importmap">
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
 {
   "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "jspdf": "https://esm.sh/jspdf@2.5.1"
   }
 }
 </script>
+  <script type="module" crossorigin src="/assets/index-BKi0DuIv.js"></script>
 </head>
-<body class="h-full bg-gray-50">
-  <div id="root" class="min-h-full"></div>
-  <script type="module" src="./index.tsx"></script>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
 </body>
 </html>
