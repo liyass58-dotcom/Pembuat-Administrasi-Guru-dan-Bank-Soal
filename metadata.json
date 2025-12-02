@@ -1,0 +1,9 @@
+{
+  "name": "Pembuat Administrasi Guru dan Bank Soal",
+  "description": "A smart platform to generate teaching materials and adaptive assessments for teachers, aligned with the 'Kurikulum Merdeka'. This tool assists in creating lesson plans, question banks, and other administrative documents for elementary, middle, and high school levels, now enhanced with a full suite of generative AI tools.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
